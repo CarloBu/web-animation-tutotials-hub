@@ -1,0 +1,65 @@
+---
+import { clips } from "@content/ytLinksData.json";
+
+function getClipParameters(clip: any) {
+  return {
+    start: Math.floor(clip.startTime / 1000),
+    end: Math.floor(clip.endTime / 1000),
+  };
+}
+function getBackgroundColor(library: string) {
+  switch (library.toUpperCase()) {
+    case "GSAP":
+      return "bg-green-500";
+    case "FRAMER":
+      return "bg-violet-500";
+    case "JAVASCRIPT":
+      return "bg-yellow-500";
+    case "CSS":
+      return "bg-blue-500";
+    default:
+      return "bg-gray-500";
+  }
+}
+---
+
+<!--src={`https://www.youtube.com/embed/${clip.videoId}?enablejsapi=1&start=${clipParameters.start}&end=${clipParameters.end}&autoplay=1&mute=1&loop=1&playlist=${clip.videoId}&controls=0`}-->/>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  {
+    clips.map((clip) => {
+      const clipParameters = getClipParameters(clip);
+
+      console.log(clipParameters);
+      return (
+        <div
+          class={`overflow-hidden rounded-lg shadow-md ${getBackgroundColor(clip.library)}`}
+        >
+          <div class="aspect-video">
+            <iframe
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/P-DjZyLM53k?si=M7sTlhy-nN_B5Xpm&amp;clip=UgkxFpMop7--lKCe5b-OpHZl4r2x5X-mBnX7&amp;clipt=EK7EARi26wE&autoplay=1&mute=1`}
+              title={clip.title}
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          </div>
+          <div class="p-4">
+            <h3 class="mb-2 line-clamp-2 text-lg font-semibold">
+              {clip.title}
+            </h3>
+            <a
+              href={clip.fullVideoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block rounded bg-red-600 px-4 py-2 text-white transition-colors hover:bg-red-700"
+            >
+              Watch Full Video
+            </a>
+          </div>
+        </div>
+      );
+    })
+  }
+</div>
