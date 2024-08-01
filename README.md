@@ -46,7 +46,7 @@ These practices resulted in a 98/100 Lighthouse score for Performance on mobile.
 
 # Technologies
 
-<div style="display: flex; align-items: center; gap: 15px;">
+<div style="display: flex; align-items: center; gap: 15px; line-height: 0;">
   <a href="https://astro.build/" target="_blank" style="color: transparent; text-decoration: none;">
     <img height="50" alt="astro-logo" src="./public/astro.svg" />
   </a>
