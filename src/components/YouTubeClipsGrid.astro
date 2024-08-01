@@ -48,7 +48,7 @@ function getBadgeColors(library: string) {
 		tutorials.map((tut) => {
 			return (
 				<div
-					class={`transition-preset group flex flex-col justify-between overflow-hidden rounded-base border-2 border-black bg-lightBg hover:shadow-cardLight focus:shadow-cardLight dark:bg-bg ${getBackgroundColors(tut.library)}`}
+					class={`smooth-transition group flex flex-col justify-between overflow-hidden rounded-base border-2 border-black bg-lightBg hover:shadow-cardLight focus:shadow-cardLight dark:bg-bg ${getBackgroundColors(tut.library)}`}
 				>
 					<div class="aspect-video overflow-hidden">
 						<video
@@ -82,7 +82,7 @@ function getBadgeColors(library: string) {
 									href={tut.link}
 									target="_blank"
 									rel="noopener noreferrer"
-									class="transition-preset flex-shrink-0 rounded-base border-2 border-black bg-main px-5 py-2 hover:bg-pink-300 hover:shadow-buttonLight active:bg-pink-500"
+									class="smooth-transition flex-shrink-0 rounded-base border-2 border-black bg-main px-5 py-2 hover:bg-pink-300 hover:shadow-buttonLight active:bg-pink-500"
 								>
 									Watch
 								</a>
