@@ -46,23 +46,17 @@ These practices resulted in a 98/100 Lighthouse score for Performance on mobile.
 
 # Technologies
 
-<div style="display: flex; align-items: center;">
-  <div style="margin-right: 15px;">
-    <a href="https://astro.build/" target="_blank" style="color: transparent; text-decoration: none;">
-      <img height="50" alt="astro-logo" src="./public/astro.svg" />
-    </a>
-  </div>
-  <div>
-    <a href="https://github.com/sveltia" target="_blank" style="color: transparent; text-decoration: none;">
-      <img height="50" alt="sveltia-logo" src="./public/sveltia.png" />
-    </a>
-  </div>
+<div style="display: flex; align-items: center; gap: 15px;">
+  <a href="https://astro.build/" target="_blank" style="color: transparent; text-decoration: none;">
+    <img height="50" alt="astro-logo" src="./public/astro.svg" />
+  </a>
+  <a href="https://github.com/sveltia" target="_blank" style="color: transparent; text-decoration: none;">
+    <img height="50" alt="sveltia-logo" src="./public/sveltia.png" />
+  </a>
+  <a href="https://tailwindcss.com/" target="_blank" style="color: transparent; text-decoration: none;">
+    <img height="50" alt="tailwind-css-logo" src="./public/tailwindcss.svg" />
+  </a>
 </div>
-  <div style="margin-right: 15px;">
-    <a href="https://tailwindcss.com/" target="_blank" style="color: transparent; text-decoration: none;">
-      <img height="50" alt="tailwind-css-logo" src="./public/tailwindcss.svg" />
-    </a>
-  </div>
 
 # License
 
