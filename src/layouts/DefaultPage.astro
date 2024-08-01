@@ -1,6 +1,7 @@
 ---
 import ColorThemeToggle from '@components/ColorThemeToggle.astro';
 import { ViewTransitions } from 'astro:transitions';
+import { Icon } from 'astro-icon/components';
 ---
 
 <html lang="en">
@@ -16,7 +17,7 @@ import { ViewTransitions } from 'astro:transitions';
 			href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
 			rel="stylesheet"
 		/>
-		<title>Astro</title>
+		<title>Animation Tutorials Hub</title>
 	</head>
 	<body
 		class="bg-bg bg-[radial-gradient(#80808080_1px,transparent_1px)] transition duration-300 ease-in-out [background-size:16px_16px] dark:bg-darkBg"
@@ -26,12 +27,30 @@ import { ViewTransitions } from 'astro:transitions';
 		</div>
 		<div class="px-2 sm:px-8">
 			<nav
-				class="bg-navColor mb-8 mt-12 flex items-center justify-between rounded-base border-4 border-b-4 border-black px-8 py-4 text-text shadow-cardLight dark:bg-[#d8a93c] dark:text-white"
+				class="mb-8 mt-12 flex items-center justify-between rounded-base border-4 border-b-4 border-black bg-navColor px-8 py-4 text-text shadow-cardLight dark:bg-[#d8a93c] dark:text-white"
 			>
-				<div class="text-2xl font-bold">Animation Tutorial Hub</div>
+				<div class="text-2xl font-bold">Animation Tutorials Hub</div>
+				<div class="flex items-center">
+					<div class="group relative">
+						<a
+							href="https://github.com/CarloBu/web-animation-tutotials-hub"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="Interested in viewing the code?"
+						>
+							<Icon
+								name="github"
+								class="h-6 w-6 text-black transition duration-300 ease-in-out hover:text-pink-400 dark:text-white dark:hover:text-pink-400"
+							/>
+						</a>
 
-				<!--<a href="/about" class="ddark:text-white text-black">About</a>-->
-				<ColorThemeToggle />
+						<span class="sr-only"
+							>The collection of web animation tutorials in one place open-source repository</span
+						>
+					</div>
+					<!--<a href="/about" class="dark:text-white text-black">About</a>-->
+					<ColorThemeToggle />
+				</div>
 			</nav>
 			<slot />
 		</div>
