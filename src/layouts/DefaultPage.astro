@@ -1,16 +1,13 @@
 ---
 import ColorThemeToggle from '@components/ColorThemeToggle.astro';
-import { ViewTransitions } from 'astro:transitions';
 import { Icon } from 'astro-icon/components';
-import '@styles/fonts.css';
+import '@styles/global.css';
 ---
 
 <html lang="en">
 	<head>
-		<ViewTransitions />
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
 		<meta
 			name="description"
@@ -28,19 +25,14 @@ import '@styles/fonts.css';
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://animationhub.site/" />
 		<meta property="og:image" content="/og-image.jpg" />
-
 		<meta name="author" content="CarloBu" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>Animation Tutorials Hub</title>
 
+		<!-- Preload fonts -->
 		<link
 			rel="preload"
 			href="/fonts/PublicSans-Regular.woff2"
-			as="font"
-			type="font/woff2"
-			crossorigin
-		/>
-		<link
-			rel="preload"
-			href="/fonts/PublicSans-Black.woff2"
 			as="font"
 			type="font/woff2"
 			crossorigin
@@ -52,7 +44,13 @@ import '@styles/fonts.css';
 			type="font/woff2"
 			crossorigin
 		/>
-		<title>Animation Tutorials Hub</title>
+		<link
+			rel="preload"
+			href="/fonts/PublicSans-Black.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
 	</head>
 	<body
 		class="bg-bg bg-[radial-gradient(#80808080_1px,transparent_1px)] transition duration-300 ease-in-out [background-size:16px_16px] dark:bg-darkBg"

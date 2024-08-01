@@ -16,6 +16,18 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Specify the Node.js version you are using
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run prebuild script
+        run: pnpm run prebuild
+
       - name: Install, build, and upload your site
         uses: withastro/action@v2
         with:
