@@ -2,6 +2,7 @@
 import ColorThemeToggle from '@components/ColorThemeToggle.astro';
 import { ViewTransitions } from 'astro:transitions';
 import { Icon } from 'astro-icon/components';
+import '@styles/fonts.css';
 ---
 
 <html lang="en">
@@ -28,19 +29,40 @@ import { Icon } from 'astro-icon/components';
 		<meta property="og:url" content="https://animationhub.site/" />
 		<meta property="og:image" content="/og-image.jpg" />
 
-		<meta name="author" content="Your Name or Organization" />
+		<meta name="author" content="CarloBu" />
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-			rel="stylesheet"
+			rel="preload"
+			href="/fonts/PublicSans-Regular.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="/fonts/PublicSans-Black.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="/fonts/PublicSans-Medium.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
 		/>
 		<title>Animation Tutorials Hub</title>
 	</head>
 	<body
 		class="bg-bg bg-[radial-gradient(#80808080_1px,transparent_1px)] transition duration-300 ease-in-out [background-size:16px_16px] dark:bg-darkBg"
-		><div
+	>
+		<style>
+			body {
+				font-family: 'Public Sans', sans-serif;
+			}
+		</style>
+		<div
 			class="[&::-webkit-scrollbar-track]:bg-light-bg bg-[radial-gradient(#80808080_1px,transparent_1px)] [background-size:16px_16px] [&::-webkit-scrollbar-thumb]:bg-black hover:[&::-webkit-scrollbar-thumb]:bg-mainHover active:[&::-webkit-scrollbar-thumb]:bg-mainActive dark:hover:[&::-webkit-scrollbar-thumb]:bg-mainActive dark:[&::-webkit-scrollbar-track]:bg-darkBg [&::-webkit-scrollbar]:w-3"
 		>
 		</div>
@@ -48,7 +70,7 @@ import { Icon } from 'astro-icon/components';
 			<nav
 				class="mb-8 mt-12 flex items-center justify-between rounded-base border-4 border-b-4 border-black bg-navColor px-8 py-4 text-text shadow-cardLight dark:bg-[#d8a93c] dark:text-white"
 			>
-				<div class="text-2xl font-bold">Animation Tutorials Hub</div>
+				<div class="text-2xl font-bold">Animation Hub</div>
 				<div class="flex items-center">
 					<div class="group relative">
 						<a

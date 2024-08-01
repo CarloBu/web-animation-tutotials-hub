@@ -54,7 +54,8 @@ export default {
 			},
 			fontWeight: {
 				base: '400',
-				heading: '700',
+				medium: '700',
+				heading: '900',
 			},
 		},
 	},
