@@ -1,14 +1,82 @@
 ---
-import Layout from "@layouts/DefaultPage.astro";
-import YouTubeClipsGrid from "../components/YouTubeClipsGrid.astro";
+import Layout from '@layouts/DefaultPage.astro';
+import { tutorial } from '@content/tutorials/tutorials.json';
+import YouTubeClipsGrid from '@components/YouTubeClipsGrid.astro';
+import type { Tutorial } from '../types/interfaces';
+export interface Props {
+	tutorials: Tutorial[];
+}
+
+// Import all category files
+const categoryFiles = import.meta.glob('../content/categories/*.json', { eager: true }) as Record<
+	string,
+	CategoryFile
+>;
+
+type CategoryFile = {
+	category: string;
+	order: number;
+};
+
+// Create categoryOrder object
+const categoryOrder: Record<string, number> = Object.values(categoryFiles).reduce<
+	Record<string, number>
+>((acc, file) => {
+	const { category, order } = file;
+	acc[category] = order;
+	return acc;
+}, {});
+
+function groupTutorialsByCategory(tutorials: Tutorial[]): Record<string, Tutorial[]> {
+	const grouped: Record<string, Tutorial[]> = {};
+
+	tutorials.forEach((tutorial) => {
+		tutorial.category.forEach((category: string) => {
+			if (!grouped[category]) {
+				grouped[category] = [];
+			}
+			grouped[category].push(tutorial);
+		});
+	});
+
+	// Sort the categories based on their order
+	const sortedCategories = Object.keys(grouped).sort(
+		(a, b) => (categoryOrder[a] || Infinity) - (categoryOrder[b] || Infinity),
+	);
+
+	// Create a new object with sorted categories
+	const sortedGrouped: Record<string, Tutorial[]> = {};
+	sortedCategories.forEach((category) => {
+		sortedGrouped[category] = grouped[category];
+	});
+
+	return sortedGrouped;
+}
+const groupedTutorials = groupTutorialsByCategory(tutorial);
+const bgColors = [
+	'bg-teal-100',
+	'bg-green-100',
+	'bg-blue-100',
+	'bg-purple-100',
+	'bg-pink-100',
+	'bg-yellow-100',
+	'bg-red-100',
+	'bg-indigo-100',
+	'bg-orange-100',
+	'bg-gray-100',
+];
 ---
 
-https://youtube.com/clip/UgkxkV3BJ-hGrttnfoyPw2eUpkd5zGDSUYFe?si=M1vXfZRjEZYWV1sB
-<Layout title="Animation Tutorial Hub">
-  <main class="container mx-auto px-4 py-8">
-    <h1 class="mb-6 text-center text-3xl font-bold">
-      Animation Tutorial Clips
-    </h1>
-    <YouTubeClipsGrid />
-  </main>
+<Layout>
+	{
+		Object.entries(groupedTutorials).map(([category, tutorials], index) => (
+			<section
+				class={`shadow-cardLight mb-8 rounded-base border-4 border-black p-4 sm:p-8 ${bgColors[index % bgColors.length]} `}
+			>
+				<h2 class="mb-3 text-5xl font-black uppercase tracking-wider">{category}</h2>
+
+				<YouTubeClipsGrid tutorials={tutorials} />
+			</section>
+		))
+	}
 </Layout>

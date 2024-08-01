@@ -1,65 +1,115 @@
 ---
-import { clips } from "@content/ytLinksData.json";
-
-function getClipParameters(clip: any) {
-  return {
-    start: Math.floor(clip.startTime / 1000),
-    end: Math.floor(clip.endTime / 1000),
-  };
+import type { Tutorial } from '../types/interfaces';
+export interface Props {
+	tutorials: Tutorial[];
 }
-function getBackgroundColor(library: string) {
-  switch (library.toUpperCase()) {
-    case "GSAP":
-      return "bg-green-500";
-    case "FRAMER":
-      return "bg-violet-500";
-    case "JAVASCRIPT":
-      return "bg-yellow-500";
-    case "CSS":
-      return "bg-blue-500";
-    default:
-      return "bg-gray-500";
-  }
+
+const { tutorials } = Astro.props;
+
+type Library = 'GSAP' | 'FRAMER' | 'JAVASCRIPT' | 'CSS' | 'default';
+
+const colorMappings: Record<Library, { background: string; badge: string }> = {
+	GSAP: { background: 'hover:bg-lime-100', badge: 'bg-lime-400 text-black' },
+	FRAMER: { background: 'hover:bg-violet-100', badge: 'bg-violet-500 text-white' },
+	JAVASCRIPT: { background: 'hover:bg-yellow-100', badge: 'bg-yellow-500 text-white' },
+	CSS: { background: 'hover:bg-blue-100', badge: 'bg-blue-500 text-white' },
+	default: { background: 'hover:bg-gray-100', badge: 'bg-gray-500 text-white' },
+};
+
+function getColor(library: string, type: 'background' | 'badge') {
+	const upperLibrary = library.toUpperCase() as Library;
+	return (colorMappings[upperLibrary] || colorMappings.default)[type];
+}
+
+function getBackgroundColors(library: string) {
+	return getColor(library, 'background');
+}
+
+function getBadgeColors(library: string) {
+	return getColor(library, 'badge');
 }
 ---
 
-<!--src={`https://www.youtube.com/embed/${clip.videoId}?enablejsapi=1&start=${clipParameters.start}&end=${clipParameters.end}&autoplay=1&mute=1&loop=1&playlist=${clip.videoId}&controls=0`}-->/>
-<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-  {
-    clips.map((clip) => {
-      const clipParameters = getClipParameters(clip);
+<style>
+	.responsive-grid {
+		grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	}
 
-      console.log(clipParameters);
-      return (
-        <div
-          class={`overflow-hidden rounded-lg shadow-md ${getBackgroundColor(clip.library)}`}
-        >
-          <div class="aspect-video">
-            <iframe
-              width="100%"
-              height="100%"
-              src={`https://www.youtube.com/embed/P-DjZyLM53k?si=M7sTlhy-nN_B5Xpm&amp;clip=UgkxFpMop7--lKCe5b-OpHZl4r2x5X-mBnX7&amp;clipt=EK7EARi26wE&autoplay=1&mute=1`}
-              title={clip.title}
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            />
-          </div>
-          <div class="p-4">
-            <h3 class="mb-2 line-clamp-2 text-lg font-semibold">
-              {clip.title}
-            </h3>
-            <a
-              href={clip.fullVideoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-block rounded bg-red-600 px-4 py-2 text-white transition-colors hover:bg-red-700"
-            >
-              Watch Full Video
-            </a>
-          </div>
-        </div>
-      );
-    })
-  }
+	@media (min-width: 300px) {
+		/* Tailwind's sm breakpoint */
+		.responsive-grid {
+			grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+		}
+	}
+</style>
+
+<div class="responsive-grid grid gap-6">
+	{
+		tutorials.map((tut) => {
+			return (
+				<div
+					class={`hover:shadow-cardLight focus:shadow-cardLight group flex flex-col justify-between overflow-hidden rounded-base border-2 border-black bg-white transition duration-300 ease-in-out focus:outline-red-500 ${getBackgroundColors(tut.library)}`}
+				>
+					<div class="aspect-video overflow-hidden">
+						<video
+							src={tut.src}
+							muted
+							loop
+							playsinline
+							class="h-full w-full object-cover transition-transform duration-500 ease-in-out"
+						/>
+					</div>
+					<div class="p-4 md:p-5">
+						<>
+							<div class="mb-2 flex items-center justify-between">
+								<h3 class="line-clamp-2 text-lg font-bold text-gray-800">{tut.title}</h3>
+							</div>
+							<div class="mt-6 flex items-center justify-between">
+								<div class="mr-4 inline-flex items-center gap-4">
+									<span
+										class={`rounded-base border-2 border-border px-3 py-1 text-sm font-base ${getBadgeColors(tut.library)}`}
+									>
+										{tut.library}
+									</span>
+									<span class="rounded-base border-2 border-border bg-gray-100 px-3 py-1 text-sm font-base text-gray-800">
+										{tut.channelTitle}
+									</span>
+								</div>
+
+								<a
+									href={tut.link}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="hover:shadow-buttonLight flex-shrink-0 rounded-base border-2 border-black bg-main px-5 py-2 transition duration-300 ease-in-out hover:bg-mainHover active:bg-mainActive"
+								>
+									Watch
+								</a>
+							</div>
+						</>
+					</div>
+				</div>
+			);
+		})
+	}
 </div>
+
+<script>
+	const videos = document.querySelectorAll('video');
+
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					(entry.target as HTMLVideoElement).play();
+				} else {
+					(entry.target as HTMLVideoElement).pause();
+				}
+			});
+		},
+		{ threshold: 0.5 },
+	);
+
+	videos.forEach((video) => {
+		observer.observe(video);
+	});
+</script>

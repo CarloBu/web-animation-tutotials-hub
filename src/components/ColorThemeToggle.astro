@@ -1,0 +1,65 @@
+<label
+	class="relative ml-4 inline-flex flex-shrink-0 cursor-pointer items-center"
+	aria-label="Toggle dark mode"
+>
+	<input type="checkbox" value="" class="peer sr-only" />
+	<div
+		class="h-6 w-11 rounded-full border-2 border-black bg-gray-400 after:absolute after:left-[4px] after:top-[4px] after:h-4 after:w-4 after:rounded-full after:border-2 after:border-black after:bg-white after:transition-all after:content-[''] peer-checked:bg-pink-300 peer-checked:shadow-[2px_2px_0px_rgba(0,0,0,1)] peer-checked:after:translate-x-5"
+	>
+	</div>
+	<span class="text-md ms-3 font-medium">Dark mode</span>
+</label>
+
+<script>
+	// Toggle dark mode and store the preference
+	const toggleDarkMode = () => {
+		const checkbox = document.querySelector('input[type="checkbox"]') as HTMLInputElement;
+		const isDarkModeEnabled = checkbox.checked;
+		document.documentElement.classList.toggle('dark', isDarkModeEnabled);
+		localStorage.setItem('darkMode', isDarkModeEnabled ? 'enabled' : 'disabled');
+	};
+
+	// Function to apply the theme based on localStorage or system preference
+	const applyTheme = () => {
+		const darkModeSetting = localStorage.getItem('darkMode');
+		const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+		const isDarkMode = darkModeSetting === 'enabled' || (!darkModeSetting && userPrefersDark);
+		document.documentElement.classList.toggle('dark', isDarkMode);
+		const checkbox = document.querySelector('input[type="checkbox"]') as HTMLInputElement | null;
+		if (checkbox) {
+			checkbox.checked = isDarkMode;
+		}
+	};
+
+	// Add event listeners to dark mode toggle button(s)
+	const addDarkModeToggleListeners = () => {
+		const checkbox = document.querySelector('input[type="checkbox"]');
+		if (checkbox) {
+			checkbox.removeEventListener('change', toggleDarkMode);
+			checkbox.addEventListener('change', toggleDarkMode);
+		}
+	};
+
+	// Initialize theme and add event listeners
+	document.addEventListener('DOMContentLoaded', () => {
+		applyTheme(); // Apply theme on initial load
+		addDarkModeToggleListeners();
+	});
+
+	// Reapply theme and reattach event listeners after Astro page transitions
+	document.addEventListener('astro:after-swap', () => {
+		applyTheme(); // Reapply theme after every page transition
+		addDarkModeToggleListeners(); // Reattach event listeners
+	});
+</script>
+
+<script is="inline">
+	// Set the initial theme
+	(() => {
+		const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+		const darkModeSetting = localStorage.getItem('darkMode');
+		const isDarkMode = darkModeSetting === 'enabled' || (!darkModeSetting && userPrefersDark);
+		document.documentElement.classList.toggle('dark', isDarkMode);
+		document.querySelector('input[type="checkbox"]').checked = isDarkMode;
+	})();
+</script>

@@ -1,16 +1,36 @@
 ---
-
+import ColorThemeToggle from '@components/ColorThemeToggle.astro';
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <slot />
-  </body>
+	<head>
+		<ViewTransitions />
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Astro</title>
+	</head>
+	<body
+		class="dark:[&::-webkit-scrollbar-thumb]:bg-light-gray-text dark:active:[&::-webkit-scrollbar-thumb]:bg-dark-primary [&::-webkit-scrollbar-track]:bg-light-bg dark:[&::-webkit-scrollbar-track]:bg-dark-bg bg-[radial-gradient(#80808080_1px,transparent_1px)] [background-size:16px_16px] [&::-webkit-scrollbar-thumb]:bg-black hover:[&::-webkit-scrollbar-thumb]:bg-mainHover active:[&::-webkit-scrollbar-thumb]:bg-mainActive dark:hover:[&::-webkit-scrollbar-thumb]:bg-mainActive [&::-webkit-scrollbar]:w-3"
+	>
+		<div class="px-2 sm:px-8">
+			<nav
+				class="shadow-cardLight mb-8 mt-12 flex items-center justify-between rounded-base border-4 border-b-4 border-black bg-[#fed36b] px-8 py-4 dark:border-white dark:bg-black"
+			>
+				<div class="text-2xl font-bold">Animation Tutorial Hub</div>
+
+				<!--<a href="/about" class="ddark:text-white text-black">About</a>-->
+				<ColorThemeToggle />
+			</nav>
+			<slot />
+		</div>
+	</body>
 </html>

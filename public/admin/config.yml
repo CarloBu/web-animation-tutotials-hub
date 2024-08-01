@@ -7,8 +7,8 @@ backend:
   base_url: http://localhost:4321
   auth_endpoint: /api/auth
 
-media_folder: /public/videos
-public_folder: /public/videos
+media_folder: public/videos
+public_folder: /videos
 
 slug:
   encoding: "ascii"
@@ -18,159 +18,39 @@ slug:
 collections:
   - label: Tutorials
     name: tutorials
-    folder: src/content/partners
-    media_folder: /public/tutrialsPreview
-    public_folder: /public/tutrialsPreview
     create: true
     delete: false
-    icon: handshake
+    icon: school
     format: json
     extension: json
     files:
-      - file: 'src/content/ytTutorials.json'
+      - file: 'src/content/tutorials/tutorials.json'
         label: Tutorial List
         name: tutorialList
         widget: object
         fields:
-          - label: Tutorial List
-            name: tutorialList
+          - label: Tutorial
+            name: tutorial
             widget: list
             fields:
               - {label: Video, name: src, widget: file}
-              - {label: Video Name, name: title, widget: string, hint: 'the partner name'}
-
-  - name: projectStatus
-    label: Project Status
-    folder: src/content/projectStatus
-    create: true
-    icon: dashboard_customize
-    i18n: true
-    format: yml
-    extension: yaml
-    slug: '{{status | localize}}'
-    editor:
-      preview: false
-    fields:
-      - label: Projekto Statusas
-        name: status
-        widget: string
-        i18n: true
+              - {label: Category, dropdown_threshold: 10, name: category, widget: relation, collection: categories, multiple: true, value_field: category}      
 
   - name: categories
     label: Categories
     folder: src/content/categories
     create: true
     icon: dashboard_customize
-    i18n: true
-    format: yml
-    extension: yaml
-    slug: '{{category | localize}}'
-    slug_length: 30
+    format: json
+    extension: json
+    slug: '{{category}}'
+    summary: "{{category | category}} - {{order | order }}"
     editor:
       preview: false
     fields:
       - name: category
         label: Category
         widget: string
-        i18n: true
-
-      - label: Order
-        name: order
+      - name: order
+        label: Order
         widget: number
-        i18n: duplicate
-
-
-
-
-  - label: Main Test
-    name: mainTestCollection
-    create: true
-    folder: src/content/mainTest/
-    i18n: true
-    format: json
-    extension: json
-    fields:
-      - { label: "Title", name: "title", widget: "string", i18n: duplicate }
-      - { label: "Description", name: "description", widget: "text", i18n: duplicate }
-      - { label: "Image", name: "image", widget: "image", i18n: duplicate }
-
-  #- name: test
-  #  label: Test
-  #  folder: src/content/test
-  #  format: yml
-  #  extension: yaml
-  #  create: true
-  #  delete: true
-  #  i18n: true
-  #  editor:
-  #    preview: false
-  #  fields:
-  #    - label: Title
-  #      name: title
-  #      widget: string
-  #      i18n: true
-  #    - label: Slug
-  #      name: slug
-  #      widget: string
-  #    - label: TranslationKey
-  #      name: translationKey
-  #      widget: compute
-  #      value: posts-{{fields.slug}}
-  #      i18n: true
-
-  #- name: studio
-  #  label: Studio
-  #  folder: src/content/studio
-  #  icon: groups
-  #  create: true
-  #  i18n: true
-  #  slug: '{{name | localize}}'
-  #  slug_length: 30
-  #  editor:
-  #    preview: false
-  #  fields:
-  #    - {label: Section UI, name: ui, widget: select, options: [studio, architect], i18n: duplicate}        
-  #    - {label: 'Name', name: 'name', widget: 'string', hint: 'The name of the architect.', i18n: duplicate}
-  #    - label: Team Image
-  #      name: pbImage
-  #      widget: object
-  #      i18n: true
-  #      fields:
-  #        - {label: Image, name: src, widget: image, i18n: duplicate}
-  #        - {label: Alt Text, name: alt, widget: string, hint: 'image description', i18n: true}
-  #    - {label: 'Body', name: 'body', widget: 'text', i18n: true }
-
-
-      #- label: 'architect'
-      #  name: 'architect'
-      #  widget: object
-      #  summary: '{{fields.header}}'
-      #  fields:
-      #    - { label: Header, name: header, widget: string, default: 'architect' }
-      #    - label: Images
-      #      name: images
-      #      widget: list
-      #      field: { label: Image, name: image, widget: image }
-      #- label: 'team'
-      #  name: 'team'
-      #  widget: object
-      #  fields:
-      #    - { label: Header, name: header, widget: string, default: 'team' }
-      #    - { label: Text, name: text, widget: text, default: 'Hello World' }
-
-
-
-
-    #fields:
-    #  - label: 'Is it News?'
-    #    name: 'isNews'
-    #    required: false
-    #    widget: object
-    #    i18n: duplicate
-    #    fields:
-    #      - label: 'News Description'
-    #        name: 'newsDescription'
-    #        widget: string
-    #        i18n: true
-    #        fields:
-    #          - {label: News Description, name: newsDescription, widget: string, required: false, i18n: true, maxlength: 70, hint: 'A short news description'}

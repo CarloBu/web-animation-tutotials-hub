@@ -10,6 +10,7 @@
       "@layouts/*": ["src/layouts/*"],
       "@assets/*": ["src/assets/*"],
       "@utils/*": ["src/assets/utils/*"],
+      "@types*": ["src/types/*"],
       "@locales": ["src/locales/en/*"]
     },
     "jsx": "react-jsx",

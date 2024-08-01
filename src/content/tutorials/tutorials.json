@@ -1,0 +1,100 @@
+{
+	"tutorial": [
+		{
+			"src": "/videos/jldgDYGuyBA.mp4",
+			"category": ["Hero", "Slider"],
+			"library": "GSAP",
+			"title": "3D Image Gallery | Shooting Fire Animation | Animated Landing Page | HTML, CSS & JavaScript (+GSAP)",
+			"link": "https://youtu.be/jldgDYGuyBA",
+			"channelTitle": "Codegrid"
+		},
+		{
+			"src": "/videos/UBzF9iZt9aI.mp4",
+			"category": ["Scroll Animation", "Slider"],
+			"library": "GSAP",
+			"title": "Infinite Scroll - GSAP ScrollTrigger Animation | Responsive Image Gallery Page HTML, CSS, JavaScript",
+			"link": "https://youtu.be/UBzF9iZt9aI",
+			"channelTitle": "Codegrid"
+		},
+		{
+			"src": "/videos/e3u-pC9c7m4.mp4",
+			"category": ["Hero", "Loader"],
+			"link": "https://youtu.be/e3u-pC9c7m4",
+			"title": "JavaScript UI Animations | Use GSAP like a Pro",
+			"channelTitle": "Daniel Hult",
+			"library": "GSAP"
+		},
+		{
+			"src": "/videos/mFNvQyq7otM.mp4",
+			"category": ["Scroll Animation", "Hero"],
+			"link": "https://youtu.be/mFNvQyq7otM",
+			"title": "Code a Creative Agency Website from Scratch (Animations & Javascript)",
+			"channelTitle": "Daniel Hult",
+			"library": "JAVASCRIPT"
+		},
+		{
+			"src": "/videos/gmFRISDoaLw.mp4",
+			"category": ["Loader"],
+			"link": "https://youtu.be/gmFRISDoaLw",
+			"title": "Loading Transition with Javascript (GSAP Flip Animation)",
+			"channelTitle": "Daniel Hult",
+			"library": "GSAP"
+		},
+		{
+			"src": "/videos/laS7TrKXqG8.mp4",
+			"category": ["Scroll Animation"],
+			"link": "https://youtu.be/laS7TrKXqG8",
+			"title": "Scroll Animations with JavaScript | Smooth Scrolling, GSAP ScrollTrigger & Parallax",
+			"channelTitle": "Daniel Hult",
+			"library": "GSAP"
+		},
+		{
+			"src": "/videos/i_DFpKZebi8.mp4",
+			"category": ["Loader"],
+			"link": "https://youtu.be/i_DFpKZebi8",
+			"title": "Smooth Intro Animation with React & GSAP | PART 1",
+			"channelTitle": "Daniel Hult",
+			"library": "GSAP"
+		},
+		{
+			"src": "/videos/RhHXKAwn5pw.mp4",
+			"category": ["Navigation"],
+			"link": "https://youtu.be/RhHXKAwn5pw",
+			"title": "Page Transitions in NextJS with GSAP",
+			"channelTitle": "Daniel Hult",
+			"library": "GSAP"
+		},
+		{
+			"src": "/videos/ecP8RwpkiQw.mp4",
+			"category": ["Navigation"],
+			"link": "https://youtu.be/ecP8RwpkiQw",
+			"title": "Impossible FLIP Layout Animations With Svelte And GSAP",
+			"channelTitle": "Joy of Code",
+			"library": "GSAP"
+		},
+		{
+			"src": "/videos/eHMZefLQc4k.mp4",
+			"category": ["Scroll Animation"],
+			"link": "https://youtu.be/eHMZefLQc4k",
+			"title": "Awwwards-Winning Scroll Trigger Animations with GSAP - Awwwards Rebuild  - HTML, CSS, Javascript",
+			"channelTitle": "We Are Digital Makers",
+			"library": "GSAP"
+		},
+		{
+			"src": "/videos/TPF56BWiJY4.mp4",
+			"category": ["Scroll Animation", "Slider"],
+			"link": "https://youtu.be/TPF56BWiJY4",
+			"title": "Image Gallery Animation On Scroll | GSAP ScrollTrigger Animation",
+			"channelTitle": "Codegrid",
+			"library": "GSAP"
+		},
+		{
+			"src": "/videos/V-kgJU-Fndk.mp4",
+			"category": ["Scroll Animation"],
+			"link": "https://youtu.be/V-kgJU-Fndk",
+			"title": "Marquee Animation | Text Animation On Scroll JavaScript | HTML, CSS & GSAP",
+			"channelTitle": "Codegrid",
+			"library": "GSAP"
+		}
+	]
+}
