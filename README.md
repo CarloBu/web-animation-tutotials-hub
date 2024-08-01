@@ -45,15 +45,15 @@ This project was made with the best practices for performance, including:
 
 # Technologies
 
-<div>
+<div style="display: flex; gap: 15px;">
 <a href="https://astro.build/" target="_blank">
-  <img width="50" alt="astro-logo" src="./public/astro.svg" />
+  <img height="50" alt="astro-logo" src="./public/astro.svg" />
 </a>
 <a href="https://tailwindcss.com/" target="_blank">
-  <img width="50" alt="tailwind-css-logo" src="./public/tailwindcss.svg" />
+  <img height="50" alt="tailwind-css-logo" src="./public/tailwindcss.svg" />
 </a>
 <a href="https://github.com/sveltia" target="_blank">
-  <img width="50" alt="sveltia-logo" src="./public/sveltia.png" />
+  <img height="50" alt="sveltia-logo" src="./public/sveltia.png" />
 </a>
 </div>
 
