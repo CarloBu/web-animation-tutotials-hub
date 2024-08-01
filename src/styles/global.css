@@ -29,3 +29,6 @@
 	font-style: normal;
 	font-display: swap;
 }
+.smooth-transition {
+	@apply transition duration-300 ease-in-out;
+}

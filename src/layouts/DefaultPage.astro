@@ -53,20 +53,11 @@ import '@styles/global.css';
 		/>
 	</head>
 	<body
-		class="bg-bg bg-[radial-gradient(#80808080_1px,transparent_1px)] transition duration-300 ease-in-out [background-size:16px_16px] dark:bg-darkBg"
+		class="transition-preset bg-bg bg-[radial-gradient(#80808080_1px,transparent_1px)] [background-size:16px_16px] dark:bg-darkBg [&::-webkit-scrollbar-thumb]:bg-darkBg hover:[&::-webkit-scrollbar-thumb]:bg-mainAccent active:[&::-webkit-scrollbar-thumb]:bg-[#2f67d8] dark:[&::-webkit-scrollbar-thumb]:bg-gray-400 dark:hover:[&::-webkit-scrollbar-thumb]:bg-mainAccent dark:active:[&::-webkit-scrollbar-thumb]:bg-[#2f67d8] [&::-webkit-scrollbar-track]:bg-bg dark:[&::-webkit-scrollbar-track]:bg-darkBg [&::-webkit-scrollbar]:w-3"
 	>
-		<style>
-			body {
-				font-family: 'Public Sans', sans-serif;
-			}
-		</style>
-		<div
-			class="[&::-webkit-scrollbar-track]:bg-light-bg bg-[radial-gradient(#80808080_1px,transparent_1px)] [background-size:16px_16px] [&::-webkit-scrollbar-thumb]:bg-black hover:[&::-webkit-scrollbar-thumb]:bg-mainHover active:[&::-webkit-scrollbar-thumb]:bg-mainActive dark:hover:[&::-webkit-scrollbar-thumb]:bg-mainActive dark:[&::-webkit-scrollbar-track]:bg-darkBg [&::-webkit-scrollbar]:w-3"
-		>
-		</div>
 		<div class="px-2 sm:px-8">
 			<nav
-				class="mb-8 mt-12 flex items-center justify-between rounded-base border-4 border-b-4 border-black bg-navColor px-8 py-4 text-text shadow-cardLight dark:bg-[#d8a93c] dark:text-white"
+				class="transition-preset mb-8 mt-12 flex items-center justify-between rounded-base border-4 border-b-4 border-black bg-navColor px-8 py-4 text-text shadow-cardLight dark:bg-[#d8ae3c] dark:text-white"
 			>
 				<div class="text-2xl font-bold">Animation Hub</div>
 				<div class="flex items-center">
@@ -79,7 +70,7 @@ import '@styles/global.css';
 						>
 							<Icon
 								name="github"
-								class="h-6 w-6 text-black transition duration-300 ease-in-out hover:text-pink-400 dark:text-white dark:hover:text-pink-400"
+								class="transition-preset h-6 w-6 text-black hover:text-pink-400 dark:text-white dark:hover:text-pink-400"
 							/>
 						</a>
 

@@ -6,10 +6,10 @@
         "Hero",
         "Slider"
       ],
-      "channelTitle": "Codegrid",
-      "link": "https://youtu.be/jldgDYGuyBA",
+      "library": "GSAP",
       "title": "3D Image Gallery | Shooting Fire Animation | Animated Landing Page | HTML, CSS & JavaScript (+GSAP)",
-      "library": "GSAP"
+      "link": "https://youtu.be/jldgDYGuyBA",
+      "channelTitle": "Codegrid"
     },
     {
       "src": "/videos/UBzF9iZt9aI.mp4",
@@ -17,10 +17,10 @@
         "Scroll Animation",
         "Slider"
       ],
-      "channelTitle": "Codegrid",
-      "link": "https://youtu.be/UBzF9iZt9aI",
+      "library": "GSAP",
       "title": "Infinite Scroll - GSAP ScrollTrigger Animation | Responsive Image Gallery Page HTML, CSS, JavaScript",
-      "library": "GSAP"
+      "link": "https://youtu.be/UBzF9iZt9aI",
+      "channelTitle": "Codegrid"
     },
     {
       "src": "/videos/e3u-pC9c7m4.mp4",
@@ -28,10 +28,10 @@
         "Hero",
         "Loader"
       ],
-      "library": "GSAP",
-      "channelTitle": "Daniel Hult",
+      "link": "https://youtu.be/e3u-pC9c7m4",
       "title": "JavaScript UI Animations | Use GSAP like a Pro",
-      "link": "https://youtu.be/e3u-pC9c7m4"
+      "channelTitle": "Daniel Hult",
+      "library": "GSAP"
     },
     {
       "src": "/videos/mFNvQyq7otM.mp4",
@@ -39,70 +39,70 @@
         "Scroll Animation",
         "Hero"
       ],
-      "library": "JS",
-      "channelTitle": "Daniel Hult",
+      "link": "https://youtu.be/mFNvQyq7otM",
       "title": "Code a Creative Agency Website from Scratch (Animations & Javascript)",
-      "link": "https://youtu.be/mFNvQyq7otM"
+      "channelTitle": "Daniel Hult",
+      "library": "JS"
     },
     {
       "src": "/videos/gmFRISDoaLw.mp4",
       "category": [
         "Loader"
       ],
-      "library": "GSAP",
-      "channelTitle": "Daniel Hult",
+      "link": "https://youtu.be/gmFRISDoaLw",
       "title": "Loading Transition with Javascript (GSAP Flip Animation)",
-      "link": "https://youtu.be/gmFRISDoaLw"
+      "channelTitle": "Daniel Hult",
+      "library": "GSAP"
     },
     {
       "src": "/videos/laS7TrKXqG8.mp4",
       "category": [
         "Scroll Animation"
       ],
-      "library": "GSAP",
-      "channelTitle": "Daniel Hult",
+      "link": "https://youtu.be/laS7TrKXqG8",
       "title": "Scroll Animations with JavaScript | Smooth Scrolling, GSAP ScrollTrigger & Parallax",
-      "link": "https://youtu.be/laS7TrKXqG8"
+      "channelTitle": "Daniel Hult",
+      "library": "GSAP"
     },
     {
       "src": "/videos/i_DFpKZebi8.mp4",
       "category": [
         "Loader"
       ],
-      "library": "GSAP",
-      "channelTitle": "Daniel Hult",
+      "link": "https://youtu.be/i_DFpKZebi8",
       "title": "Smooth Intro Animation with React & GSAP | PART 1",
-      "link": "https://youtu.be/i_DFpKZebi8"
+      "channelTitle": "Daniel Hult",
+      "library": "GSAP"
     },
     {
       "src": "/videos/RhHXKAwn5pw.mp4",
       "category": [
         "Navigation"
       ],
-      "library": "GSAP",
-      "channelTitle": "Daniel Hult",
+      "link": "https://youtu.be/RhHXKAwn5pw",
       "title": "Page Transitions in NextJS with GSAP",
-      "link": "https://youtu.be/RhHXKAwn5pw"
+      "channelTitle": "Daniel Hult",
+      "library": "GSAP"
     },
     {
       "src": "/videos/ecP8RwpkiQw.mp4",
       "category": [
         "Navigation"
       ],
-      "library": "GSAP",
-      "channelTitle": "Joy of Code",
+      "link": "https://youtu.be/ecP8RwpkiQw",
       "title": "Impossible FLIP Layout Animations With Svelte And GSAP",
-      "link": "https://youtu.be/ecP8RwpkiQw"
+      "channelTitle": "Joy of Code",
+      "library": "GSAP"
     },
     {
       "src": "/videos/eHMZefLQc4k.mp4",
       "category": [
         "Scroll Animation"
       ],
-      "library": "GSAP",
-      "channelTitle": "We Are Digital Makers",
+      "link": "https://youtu.be/eHMZefLQc4k",
       "title": "Awwwards-Winning Scroll Trigger Animations with GSAP - Awwwards Rebuild  - HTML, CSS, Javascript",
-      "link": "https://youtu.be/eHMZefLQc4k"
+      "channelTitle": "We Are Digital Makers",
+      "library": "GSAP"
     },
     {
       "src": "/videos/TPF56BWiJY4.mp4",
@@ -110,20 +110,20 @@
         "Scroll Animation",
         "Slider"
       ],
-      "library": "GSAP",
-      "channelTitle": "Codegrid",
+      "link": "https://youtu.be/TPF56BWiJY4",
       "title": "Image Gallery Animation On Scroll | GSAP ScrollTrigger Animation",
-      "link": "https://youtu.be/TPF56BWiJY4"
+      "channelTitle": "Codegrid",
+      "library": "GSAP"
     },
     {
       "src": "/videos/V-kgJU-Fndk.mp4",
       "category": [
         "Scroll Animation"
       ],
-      "library": "GSAP",
-      "channelTitle": "Codegrid",
+      "link": "https://youtu.be/V-kgJU-Fndk",
       "title": "Marquee Animation | Text Animation On Scroll JavaScript | HTML, CSS & GSAP",
-      "link": "https://youtu.be/V-kgJU-Fndk"
+      "channelTitle": "Codegrid",
+      "library": "GSAP"
     },
     {
       "src": "/videos/8AYx3xes9N0.mp4",
@@ -131,80 +131,80 @@
         "Loader",
         "Hero"
       ],
-      "link": "https://youtu.be/8AYx3xes9N0",
-      "title": "Interactive Grid Thumbnail - Website Rebuild  - HTML, CSS, Javascript (GSAP)",
+      "library": "GSAP",
       "channelTitle": "We Are Digital Makers",
-      "library": "GSAP"
+      "title": "Interactive Grid Thumbnail - Website Rebuild  - HTML, CSS, Javascript (GSAP)",
+      "link": "https://youtu.be/8AYx3xes9N0"
     },
     {
       "src": "/videos/s9y3YYM4CDU.mp4",
       "category": [
         "Scroll Animation"
       ],
-      "link": "https://youtu.be/s9y3YYM4CDU",
-      "title": "Smooth Scroll Animated Progress Bar w/Lenis - Awwwards Rebuild  - HTML, CSS, Javascript",
+      "library": "JS",
       "channelTitle": "We Are Digital Makers",
-      "library": "JS"
+      "title": "Smooth Scroll Animated Progress Bar w/Lenis - Awwwards Rebuild  - HTML, CSS, Javascript",
+      "link": "https://youtu.be/s9y3YYM4CDU"
     },
     {
       "src": "/videos/VB1U1yV3vl4.mp4",
       "category": [
         "Hover Effect"
       ],
-      "link": "https://youtu.be/VB1U1yV3vl4",
-      "title": "Responsive 3D Card Animation - HTML, CSS, Javascript (GSAP)",
+      "library": "GSAP",
       "channelTitle": "We Are Digital Makers",
-      "library": "GSAP"
+      "title": "Responsive 3D Card Animation - HTML, CSS, Javascript (GSAP)",
+      "link": "https://youtu.be/VB1U1yV3vl4"
     },
     {
       "src": "/videos/aDDp39e6LwI.mp4",
       "category": [
         "Navigation"
       ],
-      "link": "https://youtu.be/aDDp39e6LwI",
-      "title": "Elevate Your Menus with SVG Animations - Awwwards Rebuild (P2)  - HTML, CSS, Javascript (GSAP)",
+      "library": "GSAP",
       "channelTitle": "We Are Digital Makers",
-      "library": "GSAP"
+      "title": "Elevate Your Menus with SVG Animations - Awwwards Rebuild (P2)  - HTML, CSS, Javascript (GSAP)",
+      "link": "https://youtu.be/aDDp39e6LwI"
     },
     {
       "src": "/videos/GFpVyWX1tMA.mp4",
       "category": [
         "Loader"
       ],
-      "link": "https://youtu.be/GFpVyWX1tMA",
-      "title": "Create Eye-Catching Preloader Animation - Awwwards Rebuild (P1)",
+      "library": "GSAP",
       "channelTitle": "We Are Digital Makers",
-      "library": "GSAP"
+      "title": "Create Eye-Catching Preloader Animation - Awwwards Rebuild (P1)",
+      "link": "https://youtu.be/GFpVyWX1tMA"
     },
     {
       "src": "/videos/Oj_PYR5kgAM.mp4",
       "category": [
         "Hover Effect"
       ],
-      "link": "https://youtu.be/Oj_PYR5kgAM",
-      "title": "Hover Smooth Trail Animation - Awwwards Rebuild - HTML, CSS, Javascript (GSAP)",
+      "library": "GSAP",
       "channelTitle": "We Are Digital Makers",
-      "library": "GSAP"
+      "title": "Hover Smooth Trail Animation - Awwwards Rebuild - HTML, CSS, Javascript (GSAP)",
+      "link": "https://youtu.be/Oj_PYR5kgAM"
     },
     {
       "src": "/videos/Oeo1sJ6Kqtg.mp4",
       "category": [
         "Navigation"
       ],
-      "link": "https://youtu.be/Oeo1sJ6Kqtg",
-      "title": "Page Transition with Barba.js and GSAP (part3)  - HTML, CSS, Javascript",
+      "library": "GSAP",
       "channelTitle": "We Are Digital Makers",
-      "library": "GSAP"
+      "title": "Page Transition with Barba.js and GSAP (part3)  - HTML, CSS, Javascript",
+      "link": "https://youtu.be/Oeo1sJ6Kqtg"
     },
     {
       "src": "/videos/WNeknS10U9U.mp4",
       "category": [
         "Scroll Animation"
       ],
-      "link": "https://youtu.be/WNeknS10U9U",
-      "title": "Scroll Clip Path Gallery and Thumbnail - Awwwards Rebuild  - HTML, CSS, Javascript",
+      "library": "JS",
       "channelTitle": "We Are Digital Makers",
-      "library": "JS"
+      "title": "Scroll Clip Path Gallery and Thumbnail - Awwwards Rebuild  - HTML, CSS, Javascript",
+      "link": "https://youtu.be/WNeknS10U9U"
     },
     {
       "src": "/videos/KVokeWWqjzA.mp4",
@@ -212,20 +212,20 @@
         "Loader",
         "Hover Effect"
       ],
-      "link": "https://youtu.be/KVokeWWqjzA",
-      "title": "Page Intro and Hover Animation - Awwwards Rebuild  - HTML, CSS, Javascript(GSAP)",
+      "library": "GSAP",
       "channelTitle": "We Are Digital Makers",
-      "library": "GSAP"
+      "title": "Page Intro and Hover Animation - Awwwards Rebuild  - HTML, CSS, Javascript(GSAP)",
+      "link": "https://youtu.be/KVokeWWqjzA"
     },
     {
       "src": "/videos/aPsWpL0umOw.mp4",
       "category": [
         "Slider"
       ],
-      "link": "https://youtu.be/aPsWpL0umOw",
-      "title": "GSAP Slider Animation - HTML, CSS, Javascript(GSAP)",
+      "library": "GSAP",
       "channelTitle": "We Are Digital Makers",
-      "library": "GSAP"
+      "title": "GSAP Slider Animation - HTML, CSS, Javascript(GSAP)",
+      "link": "https://youtu.be/aPsWpL0umOw"
     },
     {
       "src": "/videos/rJ3XjTUEafo.mp4",
@@ -233,10 +233,10 @@
         "Hover Effect",
         "Hero"
       ],
-      "link": "https://youtu.be/rJ3XjTUEafo",
-      "title": "Spline 3D Responsive Animated Page  - HTML, CSS, Javascript (Spline.js)",
+      "library": "JS",
       "channelTitle": "We Are Digital Makers",
-      "library": "JS"
+      "title": "Spline 3D Responsive Animated Page  - HTML, CSS, Javascript (Spline.js)",
+      "link": "https://youtu.be/rJ3XjTUEafo"
     },
     {
       "src": "/videos/5SnE9RTewk0.mp4",
@@ -244,20 +244,20 @@
         "Slider",
         "Scroll Animation"
       ],
-      "link": "https://youtu.be/5SnE9RTewk0",
-      "title": "Lenis Infinite Vertical Scroll -  HTML, CSS, Javascript(Lenis)",
+      "library": "JS",
       "channelTitle": "We Are Digital Makers",
-      "library": "JS"
+      "title": "Lenis Infinite Vertical Scroll -  HTML, CSS, Javascript(Lenis)",
+      "link": "https://youtu.be/5SnE9RTewk0"
     },
     {
       "src": "/videos/Z8kYDheJUVY.mp4",
       "category": [
         "Navigation"
       ],
-      "link": "https://youtu.be/Z8kYDheJUVY",
-      "title": "Responsive Full Screen Menu Animation - Awwwards Rebuild  - HTML, CSS, Javascript (GSAP)",
+      "library": "GSAP",
       "channelTitle": "We Are Digital Makers",
-      "library": "GSAP"
+      "title": "Responsive Full Screen Menu Animation - Awwwards Rebuild  - HTML, CSS, Javascript (GSAP)",
+      "link": "https://youtu.be/Z8kYDheJUVY"
     },
     {
       "src": "/videos/pHUUwba9u4U.mp4",
@@ -265,10 +265,10 @@
         "Scroll Animation",
         "Text Animation"
       ],
-      "link": "https://youtu.be/pHUUwba9u4U",
-      "title": "Page Scroll Text Animation - Awwwards Rebuild  - HTML, CSS, Javascript",
+      "library": "JS",
       "channelTitle": "We Are Digital Makers",
-      "library": "JS"
+      "title": "Page Scroll Text Animation - Awwwards Rebuild  - HTML, CSS, Javascript",
+      "link": "https://youtu.be/pHUUwba9u4U"
     },
     {
       "src": "/videos/V4c1JcTSZZo.mp4",
@@ -276,30 +276,30 @@
         "Scroll Animation",
         "Slider"
       ],
-      "link": "https://youtu.be/V4c1JcTSZZo",
-      "title": "Lenis Horizontal Smooth Scroll - HTML, CSS, Javascript (Lenis)",
+      "library": "JS",
       "channelTitle": "We Are Digital Makers",
-      "library": "JS"
+      "title": "Lenis Horizontal Smooth Scroll - HTML, CSS, Javascript (Lenis)",
+      "link": "https://youtu.be/V4c1JcTSZZo"
     },
     {
       "src": "/videos/rI7q4BuaUeI.mp4",
       "category": [
         "Navigation"
       ],
-      "link": "https://youtu.be/rI7q4BuaUeI",
-      "title": "Responsive Toggle View Animation - Awwwards Rebuild  - HTML, CSS, Javascript (GSAP)",
+      "library": "GSAP",
       "channelTitle": "We Are Digital Makers",
-      "library": "GSAP"
+      "title": "Responsive Toggle View Animation - Awwwards Rebuild  - HTML, CSS, Javascript (GSAP)",
+      "link": "https://youtu.be/rI7q4BuaUeI"
     },
     {
       "src": "/videos/5Ny-zh5-78I.mp4",
       "category": [
         "Hover Effect"
       ],
-      "link": "https://youtu.be/5Ny-zh5-78I",
-      "title": "Click to Reveal Animation - Awwwards Rebuild  - HTML, CSS, Javascript (GSAP)",
+      "library": "GSAP",
       "channelTitle": "We Are Digital Makers",
-      "library": "GSAP"
+      "title": "Click to Reveal Animation - Awwwards Rebuild  - HTML, CSS, Javascript (GSAP)",
+      "link": "https://youtu.be/5Ny-zh5-78I"
     },
     {
       "src": "/videos/U0zeRTBXUU0.mp4",
@@ -307,30 +307,30 @@
         "Loader",
         "Hero"
       ],
-      "link": "https://youtu.be/U0zeRTBXUU0",
-      "title": "Smooth Website Intro Animation  - HTML, CSS, Javascript (GSAP)",
+      "library": "GSAP",
       "channelTitle": "We Are Digital Makers",
-      "library": "GSAP"
+      "title": "Smooth Website Intro Animation  - HTML, CSS, Javascript (GSAP)",
+      "link": "https://youtu.be/U0zeRTBXUU0"
     },
     {
       "src": "/videos/1TRWi1OGDsE.mp4",
       "category": [
         "Scroll Animation"
       ],
-      "link": "https://youtu.be/1TRWi1OGDsE",
-      "title": "GSAP ScrollTrigger Sticky Section  - GSAP Showcase Rebuild (part2)",
+      "library": "GSAP",
       "channelTitle": "We Are Digital Makers",
-      "library": "GSAP"
+      "title": "GSAP ScrollTrigger Sticky Section  - GSAP Showcase Rebuild (part2)",
+      "link": "https://youtu.be/1TRWi1OGDsE"
     },
     {
       "src": "/videos/IYSuNOpZYrQ.mp4",
       "category": [
         "Navigation"
       ],
-      "link": "https://youtu.be/IYSuNOpZYrQ",
-      "title": "Page Transition with Barba.js and GSAP (part2)  - HTML, CSS, Javascript",
+      "library": "GSAP",
       "channelTitle": "We Are Digital Makers",
-      "library": "GSAP"
+      "title": "Page Transition with Barba.js and GSAP (part2)  - HTML, CSS, Javascript",
+      "link": "https://youtu.be/IYSuNOpZYrQ"
     },
     {
       "src": "/videos/4cjP5PliBWE.mp4",
@@ -338,10 +338,10 @@
         "Loader",
         "Hero"
       ],
-      "link": "https://youtu.be/4cjP5PliBWE",
-      "title": "Preloader Animation and Hero Reveal - HTML, CSS, Javascript (GSAP)",
+      "library": "GSAP",
       "channelTitle": "We Are Digital Makers",
-      "library": "GSAP"
+      "title": "Preloader Animation and Hero Reveal - HTML, CSS, Javascript (GSAP)",
+      "link": "https://youtu.be/4cjP5PliBWE"
     },
     {
       "src": "/videos/xMJYxQA_310.mp4",
@@ -349,20 +349,26 @@
         "Loader",
         "Hero"
       ],
-      "link": "https://youtu.be/xMJYxQA_310",
-      "title": "Landing Page Reveal Animation - Awwwards Rebuild (part1) - HTML, CSS, GSAP and Splitting.js",
+      "library": "GSAP",
       "channelTitle": "We Are Digital Makers",
-      "library": "GSAP"
+      "title": "Landing Page Reveal Animation - Awwwards Rebuild (part1) - HTML, CSS, GSAP and Splitting.js",
+      "link": "https://youtu.be/xMJYxQA_310"
     },
     {
       "src": "/videos/a3qElcnSX_Q.mp4",
       "category": [
         "Navigation"
       ],
-      "link": "https://youtu.be/a3qElcnSX_Q",
-      "title": "Full Screen Menu Animation  - Awwwards Rebuild (part2)  - HTML, CSS, JS (GSAP)",
+      "library": "GSAP",
       "channelTitle": "We Are Digital Makers",
-      "library": "GSAP"
+      "title": "Full Screen Menu Animation  - Awwwards Rebuild (part2)  - HTML, CSS, JS (GSAP)",
+      "link": "https://youtu.be/a3qElcnSX_Q"
+    },
+    {
+      "src": "/videos/V_YFwPaEEBY.mp4",
+      "category": [
+        "Scroll Animation"
+      ]
     }
   ]
 }

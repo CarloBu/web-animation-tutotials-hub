@@ -21,7 +21,6 @@ export default {
 				overlay: 'rgba(0,0,0,0.8)',
 				navColor: '#fed36b',
 				darkNavColor: '#e9b845',
-				// background color overlay for alert dialogs, modals, etc.
 
 				// light mode
 				bg: '#dfe5f2',
