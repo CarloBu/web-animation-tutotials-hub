@@ -50,7 +50,7 @@ This project was made with the best practices for performance, including:
   <img width="50" alt="astro-logo" src="./public/astro.svg" />
 </a>
 <a href="https://tailwindcss.com/" target="_blank">
-  <img width="50" alt="tailwind-css-logo" src="./public/tailwindcss-icon.svg" />
+  <img width="50" alt="tailwind-css-logo" src="./public/tailwindcss.svg" />
 </a>
 <a href="https://github.com/sveltia" target="_blank">
   <img width="50" alt="sveltia-logo" src="./public/sveltia.png" />
@@ -63,4 +63,4 @@ The MIT License
 
 # Acknowledgement
 
-This project is inspired by [neo-brutalism-ui-library](https://github.com/marieooq/neo-brutalism-ui-library/tree/main).
+This project design is inspired by [neo-brutalism-ui-library](https://github.com/marieooq/neo-brutalism-ui-library/tree/main).
