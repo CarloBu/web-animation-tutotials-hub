@@ -46,27 +46,23 @@ These practices resulted in a 98/100 Lighthouse score for Performance on mobile.
 
 # Technologies
 
-<table style="border-collapse: collapse; border: none;">
-  <tr>
-    <td style="border: none;">
-      <a href="https://astro.build/" target="_blank" style="color: transparent; text-decoration: none;">
-        <img height="50" alt="astro-logo" src="./public/astro.svg" />
-      </a>
-    </td>
-    <td style="width: 15px; border: none;"></td>
-    <td style="border: none;">
-      <a href="https://tailwindcss.com/" target="_blank" style="color: transparent; text-decoration: none;">
-        <img height="50" alt="tailwind-css-logo" src="./public/tailwindcss.svg" />
-      </a>
-    </td>
-    <td style="width: 15px; border: none;"></td>
-    <td style="border: none;">
-      <a href="https://github.com/sveltia" target="_blank" style="color: transparent; text-decoration: none;">
-        <img height="50" alt="sveltia-logo" src="./public/sveltia.png" />
-      </a>
-    </td>
-  </tr>
-</table>
+<div style="display: flex; align-items: center;">
+  <div style="margin-right: 15px;">
+    <a href="https://astro.build/" target="_blank" style="color: transparent; text-decoration: none;">
+      <img height="50" alt="astro-logo" src="./public/astro.svg" />
+    </a>
+  </div>
+  <div>
+    <a href="https://github.com/sveltia" target="_blank" style="color: transparent; text-decoration: none;">
+      <img height="50" alt="sveltia-logo" src="./public/sveltia.png" />
+    </a>
+  </div>
+</div>
+  <div style="margin-right: 15px;">
+    <a href="https://tailwindcss.com/" target="_blank" style="color: transparent; text-decoration: none;">
+      <img height="50" alt="tailwind-css-logo" src="./public/tailwindcss.svg" />
+    </a>
+  </div>
 
 # License
 
