@@ -30,14 +30,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run prebuild script
-        run: pnpm run prebuild
-
       - name: Install, build, and upload your site
         uses: withastro/action@v2
         with:
           package-manager: pnpm@latest
-
+          command: |
+            pnpm run prebuild
+            pnpm run build
+            
   deploy:
     needs: build
     runs-on: ubuntu-latest
