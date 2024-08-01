@@ -6,14 +6,14 @@ export interface Props {
 
 const { tutorials } = Astro.props;
 
-type Library = 'GSAP' | 'FRAMER' | 'JAVASCRIPT' | 'CSS' | 'default';
+type Library = 'GSAP' | 'FRAMER' | 'JS' | 'CSS' | 'default';
 
 const colorMappings: Record<Library, { background: string; badge: string }> = {
-	GSAP: { background: 'hover:bg-lime-100', badge: 'bg-lime-400 text-black' },
-	FRAMER: { background: 'hover:bg-violet-100', badge: 'bg-violet-500 text-white' },
-	JAVASCRIPT: { background: 'hover:bg-yellow-100', badge: 'bg-yellow-500 text-white' },
-	CSS: { background: 'hover:bg-blue-100', badge: 'bg-blue-500 text-white' },
-	default: { background: 'hover:bg-gray-100', badge: 'bg-gray-500 text-white' },
+	GSAP: { background: 'hover:bg-lime-100', badge: 'bg-lime-400 text-text' },
+	FRAMER: { background: 'hover:bg-violet-100', badge: 'bg-violet-500 text-text' },
+	JS: { background: 'hover:bg-yellow-100', badge: 'bg-yellow-500 text-text' },
+	CSS: { background: 'hover:bg-blue-100', badge: 'bg-blue-500 text-text' },
+	default: { background: 'hover:bg-gray-100', badge: 'bg-gray-500 text-text' },
 };
 
 function getColor(library: string, type: 'background' | 'badge') {
@@ -48,7 +48,7 @@ function getBadgeColors(library: string) {
 		tutorials.map((tut) => {
 			return (
 				<div
-					class={`hover:shadow-cardLight focus:shadow-cardLight group flex flex-col justify-between overflow-hidden rounded-base border-2 border-black bg-white transition duration-300 ease-in-out focus:outline-red-500 ${getBackgroundColors(tut.library)}`}
+					class={`bg-lightBg group flex flex-col justify-between overflow-hidden rounded-base border-2 border-black transition duration-300 ease-in-out hover:shadow-cardLight focus:shadow-cardLight dark:bg-bg ${getBackgroundColors(tut.library)}`}
 				>
 					<div class="aspect-video overflow-hidden">
 						<video
@@ -62,7 +62,7 @@ function getBadgeColors(library: string) {
 					<div class="p-4 md:p-5">
 						<>
 							<div class="mb-2 flex items-center justify-between">
-								<h3 class="line-clamp-2 text-lg font-bold text-gray-800">{tut.title}</h3>
+								<h3 class="line-clamp-2 text-lg font-bold text-text">{tut.title}</h3>
 							</div>
 							<div class="mt-6 flex items-center justify-between">
 								<div class="mr-4 inline-flex items-center gap-4">
@@ -80,7 +80,7 @@ function getBadgeColors(library: string) {
 									href={tut.link}
 									target="_blank"
 									rel="noopener noreferrer"
-									class="hover:shadow-buttonLight flex-shrink-0 rounded-base border-2 border-black bg-main px-5 py-2 transition duration-300 ease-in-out hover:bg-mainHover active:bg-mainActive"
+									class="flex-shrink-0 rounded-base border-2 border-black bg-main px-5 py-2 transition duration-300 ease-in-out hover:bg-pink-300 hover:shadow-buttonLight active:bg-pink-500"
 								>
 									Watch
 								</a>

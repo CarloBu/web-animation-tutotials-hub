@@ -23,7 +23,7 @@
 	const applyTheme = () => {
 		const darkModeSetting = localStorage.getItem('darkMode');
 		const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-		const isDarkMode = darkModeSetting === 'enabled' || (!darkModeSetting && userPrefersDark);
+		const isDarkMode = darkModeSetting ? darkModeSetting === 'enabled' : false; // Default to light mode
 		document.documentElement.classList.toggle('dark', isDarkMode);
 		const checkbox = document.querySelector('input[type="checkbox"]') as HTMLInputElement | null;
 		if (checkbox) {
@@ -56,9 +56,8 @@
 <script is="inline">
 	// Set the initial theme
 	(() => {
-		const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 		const darkModeSetting = localStorage.getItem('darkMode');
-		const isDarkMode = darkModeSetting === 'enabled' || (!darkModeSetting && userPrefersDark);
+		const isDarkMode = darkModeSetting ? darkModeSetting === 'enabled' : false; // Default to light mode
 		document.documentElement.classList.toggle('dark', isDarkMode);
 		document.querySelector('input[type="checkbox"]').checked = isDarkMode;
 	})();

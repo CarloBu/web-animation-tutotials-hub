@@ -7,7 +7,7 @@ function getLibraryFromTitle(title) {
 	const lowerTitle = title.toLowerCase();
 	if (lowerTitle.includes('gsap')) return 'GSAP';
 	if (lowerTitle.includes('framer')) return 'FRAMER';
-	if (lowerTitle.includes('javascript') || lowerTitle.includes('js')) return 'JAVASCRIPT';
+	if (lowerTitle.includes('js') || lowerTitle.includes('js')) return 'JS';
 	return 'CSS';
 }
 

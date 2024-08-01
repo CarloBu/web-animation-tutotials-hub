@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue,mjs}'],
 	darkMode: 'class',
 	theme: {
 		extend: {
@@ -8,13 +8,15 @@ export default {
 				main: '#A6FAFF',
 				mainHover: '#79F7FF',
 				mainActive: '#00E1EF',
-
 				mainAccent: '#4d80e6', // not needed for shadcn components
 				overlay: 'rgba(0,0,0,0.8)',
+				navColor: '#fed36b',
+				darkNavColor: '#e9b845',
 				// background color overlay for alert dialogs, modals, etc.
 
 				// light mode
 				bg: '#dfe5f2',
+				lightBg: '#fff',
 				text: '#000',
 				border: '#000',
 
@@ -22,6 +24,7 @@ export default {
 				darkBg: '#272933',
 				darkText: '#eeefe9',
 				darkBorder: '#000',
+				darkLightBg: 'bg-gray-800',
 			},
 			borderRadius: {
 				base: '0.75rem',
