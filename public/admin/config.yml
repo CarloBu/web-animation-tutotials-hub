@@ -16,8 +16,8 @@ slug:
   sanitize_replacement: "-"
 
 collections:
-  - label: Tutorials
-    name: tutorials
+  - name: tutorialList
+    label: Tutorial List
     create: true
     delete: false
     icon: school
@@ -26,31 +26,35 @@ collections:
     files:
       - file: 'src/content/tutorials/tutorials.json'
         label: Tutorial List
-        name: tutorialList
+        name: tutorialListFile
         widget: object
         fields:
-          - label: Tutorial
-            name: tutorial
+          - label: Tutorial Items
+            name: tutorialItems
             widget: list
             fields:
               - {label: Video, name: src, widget: file}
-              - {label: Category, dropdown_threshold: 10, name: category, widget: relation, collection: categories, multiple: true, value_field: category}      
+              - label: Category
+                name: category
+                dropdown_threshold: 10
+                widget: relation
+                collection: categoryCollection
+                file: categoryListFile
+                value_field: "categories.*.category"
+                multiple: true
 
-  - name: categories
+  - name: categoryCollection
     label: Categories
-    folder: src/content/categories
     create: true
-    icon: dashboard_customize
-    format: json
-    extension: json
-    slug: '{{category}}'
-    summary: "{{category | category}} - {{order | order }}"
-    editor:
-      preview: false
-    fields:
-      - name: category
-        label: Category
-        widget: string
-      - name: order
-        label: Order
-        widget: number
+    delete: true
+    files:
+      - file: 'src/content/categories/categories.json'
+        label: Category List
+        name: categoryListFile
+        widget: object
+        fields:
+          - label: Categories
+            name: categories
+            widget: list
+            fields:
+              - {label: Category, name: category, widget: string}

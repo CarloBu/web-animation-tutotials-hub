@@ -1,5 +1,5 @@
 {
-	"tutorial": [
+	"tutorialItems": [
 		{
 			"src": "/videos/jldgDYGuyBA.mp4",
 			"category": ["Hero", "Slider"],
@@ -282,7 +282,7 @@
 		},
 		{
 			"src": "/videos/V_YFwPaEEBY.mp4",
-			"category": ["Scroll Animation"],
+			"category": ["Scroll Animation", "Navigation"],
 			"link": "https://youtu.be/V_YFwPaEEBY",
 			"title": "Scroll Trigger Clip Path Animation - HTML, CSS, Lenis and GSAP",
 			"channelTitle": "We Are Digital Makers",

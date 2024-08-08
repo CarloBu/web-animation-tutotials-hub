@@ -1,58 +1,40 @@
 ---
 import Layout from '@layouts/DefaultPage.astro';
-import { tutorial } from '@content/tutorials/tutorials.json';
+import { tutorialItems } from '@content/tutorials/tutorials.json';
+import { categories } from '@content/categories/categories.json';
+
 import YouTubeClipsGrid from '@components/YouTubeClipsGrid.astro';
 import type { Tutorial } from '../types/interfaces';
 export interface Props {
 	tutorials: Tutorial[];
 }
 
-// Import all category files
-const categoryFiles = import.meta.glob('../content/categories/*.json', { eager: true }) as Record<
-	string,
-	CategoryFile
->;
-
-type CategoryFile = {
-	category: string;
-	order: number;
-};
-
-// Create categoryOrder object
-const categoryOrder: Record<string, number> = Object.values(categoryFiles).reduce<
-	Record<string, number>
->((acc, file) => {
-	const { category, order } = file;
-	acc[category] = order;
-	return acc;
-}, {});
+const categoryOrder: Record<string, number> = categories.reduce<Record<string, number>>(
+	(acc, category, index) => {
+		acc[category.category] = index;
+		return acc;
+	},
+	{},
+);
 
 function groupTutorialsByCategory(tutorials: Tutorial[]): Record<string, Tutorial[]> {
 	const grouped: Record<string, Tutorial[]> = {};
 
-	tutorials.forEach((tutorial) => {
-		tutorial.category.forEach((category: string) => {
-			if (!grouped[category]) {
-				grouped[category] = [];
-			}
-			grouped[category].push(tutorial);
-		});
+	categories.forEach(({ category }) => {
+		grouped[category] = tutorials.filter((tutorial) => tutorial.category.includes(category));
 	});
-
-	// Sort the categories based on their order
-	const sortedCategories = Object.keys(grouped).sort(
-		(a, b) => (categoryOrder[a] || Infinity) - (categoryOrder[b] || Infinity),
-	);
 
 	// Create a new object with sorted categories
 	const sortedGrouped: Record<string, Tutorial[]> = {};
-	sortedCategories.forEach((category) => {
-		sortedGrouped[category] = grouped[category];
+	categories.forEach(({ category }) => {
+		if (grouped[category] && grouped[category].length > 0) {
+			sortedGrouped[category] = grouped[category];
+		}
 	});
 
 	return sortedGrouped;
 }
-const groupedTutorials = groupTutorialsByCategory(tutorial);
+const groupedTutorials = groupTutorialsByCategory(tutorialItems);
 const bgColors = [
 	'bg-teal-100 dark:bg-teal-900',
 	'bg-green-100 dark:bg-green-900',
